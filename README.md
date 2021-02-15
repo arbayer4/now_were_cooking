@@ -1,6 +1,6 @@
 # Project Overview
 
-## Project Name
+## Now We're Cookin'!
 
 The name of your project.
 
