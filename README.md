@@ -2,74 +2,70 @@
 
 ## Now We're Cookin'!
 
-The name of your project.
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and/or functionality.
+This app will be a recipe catalogue. It will allow users to view a list of recipes, and also contribute recipes. The homepage will have a few select recipes.
+The recipe list will have recipe titles with a photo (if photo exists). Then when the user selects a certain recipe the recipe page will give a detailed description to cook the recipe, including ingredients and steps. 
 
 ## Wireframes
 
-Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
-
+Desktop: https://wireframe.cc/pro/pp/644724e32415092
+Tablet: https://wireframe.cc/pro/pp/7d7cc787e415010
+Mobile: https://wireframe.cc/pro/pp/9d9819bbe415093
 ## Component Hierarchy
-Show your component hierarchy here! Use [this](https://cms-assets.tutsplus.com/uploads/users/1795/posts/30352/image/GettingStartedWithReduxTutorial-React-Component-Structure.png) as an example.
+
+https://app.diagrams.net/#G1JkH1gxs-ZQBVArigTTg3pPn7uZtfDW9y
 
 ## API and Data Sample
-
-Show us a snippet of JSON returned by your Airtable (you can find it under the API documentation) so we know you can access it and get the info you need. This __must__ be properly formatted. An example is below:
 
 ```json
 {
     "records": [
         {
-            "id": "recONRzIUTuZ5lXaF",
+            "id": "recBqtGF9biJ87Qs5",
             "fields": {
-                "author": "Liz Yrineo",
-                "setup": "Why did the tomato turn red?",
-                "punchline": "Because it saw the salad dressing!"
+                "title": "Avocado Pesto Pasta",
+                "likes": 1,
+                "types": [
+                    "Breakfast",
+                    "Lunch",
+                    "Dinner",
+                    "Dessert",
+                    "Snack"
+                ],
+                "ingredients": "1/2 cup basil; 3-4 cloves garlic; 2 Tbs olive oil; 2 avocados, pitted; 3/4-1 tsp salt to taste; black pepper; 1lb pasta of choice",
+                "steps": "In a large pot, bring salted water to boil. Once Boiling, cook pasta according to package directions;  Make sauce in food processor. Combine basil and...",
+                "vegetarian?": true,
+                "author": "Andy Bayer",
+                "photo": "https://unsplash.com/photos/ticuPP5l2qg",
+                "reviews": "Bon Appetit! Delicious, would definitely make again;",
+                "dislikes": 0,
+                "selected type": "Dinner"
             },
-            "createdTime": "2020-11-30T16:03:09.000Z"
-        },
-        {
-            "id": "rec3oYZ5Tp0AIDsKe",
-            "fields": {
-                "author": "Rachel Moskowitz",
-                "setup": "What did the green grape say to the red grape?",
-                "punchline": "Breathe, idiot, breathe!"
-            },
-            "createdTime": "2020-11-30T16:03:09.000Z"
-        },
-        {
-            "id": "recA34tOaoE1IVeC1",
-            "fields": {
-                "author": "Gary Grant",
-                "setup": "How do you make holy water?",
-                "punchline": "You boil the hell out of it!"
-            },
-            "createdTime": "2020-11-30T16:03:09.000Z"
+            "createdTime": "2021-02-10T23:57:27.000Z"
         }
     ],
-    "offset": "recA34tOaoE1IVeC1"
+    "offset": "recBqtGF9biJ87Qs5"
 }
 ```
 
 ### MVP/PostMVP
-
-The functionality will then be divided into two separate lists: MVP and PostMVP.  Carefully decide what is placed into your MVP, as the client will expect this functionality to be implemented upon project completion.  
-
+ 
 #### MVP 
-*These are examples only. Replace with your own MVP features.*
+-Create functional database on Airtable
+-Use recipe data from airtable using axios Get request
+-Homepage with a few selected recipes, and navigation bar with links to recipe list and recipe submission
+-Recipe list page will have links to full recipe.
+-Form will allow user to submit new recipe to add to list (axios Post).
 
-- Find and use external api 
-- Render data on page 
-- Allow user to choose favorites 
 
 #### PostMVP  
-*These are examples only. Replace with your own Post-MVP features.*
-
-- Add second API
-- Use local storage to save user favorites
+-Add more advanced search features for dietary restrictions, allergens, etc. 
+-Like and dislike button for each recipe. 
+-Sort recipes based on users likes/dislikes
+-Delete recipes based on if dislike percentage is too high.
+-Display user reviews and allow users to add a review.
 
 ## Project Schedule
 
@@ -77,32 +73,33 @@ This schedule will be used to keep track of your progress throughout the week an
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|July 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|July 13| Project Approval | Incomplete
-|July 13| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|July 14| Pseudocode / actual code | Incomplete
-|July 15| Initial Clickable Model  | Incomplete
-|July 16| MVP | Incomplete
-|July 17| Presentations | Incomplete
+|Feb 15| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
+|Feb 16| Project Approval/ Airtable Build Complete Buildout | Incomplete
+|Feb 17| Setup Components/GET and POST/ Basic Clickable | Incomplete 
+|Feb 18| Style Components | Incomplete
+|Feb 19| Media Queries/ Deploy on Netlify/ MVP | Incomplete
+|Feb 22| Post MVP | Incomplete
+|Feb 23| Presentations | Incomplete
 
 ## Timeframes
 
-Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
-
-Time frames are also key in the development cycle.  You have limited time to code all parts of your app.  Your estimates can then be used to evalute possibilities based on time needed and the actual time you have before the app must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add an additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
-
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
+| Adding Data To Airtable | H | 3hrs|  |  |
 | Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
 | Total | H | 6hrs| 5hrs | 5hrs |
 
 ## SWOT Analysis
 
 ### Strengths:
+Writing components and navigating the data structures from airtable API call are things I have gotten really strong at. 
 
 ### Weaknesses:
+Styling and user experience. I know what looks good, and what doesn't when I see it. It is just hard for me to get envision the styling. I'm hoping continued
+practice will allow me to improve.
 
 ### Opportunities:
+I think I have the chance to make a really functional app that also allows me to stretch my current abilities in React to become a stronger developer. 
 
 ### Threats:
+My biggest threat is time management. Sometimes I get wrapped up in small details that aren't that important and waste too much time on them. 
