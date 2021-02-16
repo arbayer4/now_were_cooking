@@ -89,8 +89,8 @@ This schedule will be used to keep track of your progress throughout the week an
 | --- | :---: |  :---: | :---: | :---: |
 | Adding Data To Airtable | H | 3hrs|  |  |
 | App Component with Routes| H | 3hrs|  |  |
-|Nav Component|2hrs||||
-|Header and Fotter Componennts|2hrs||||
+|Nav Component| H |2hrs|||
+|Header and Fotter Componennts|H|2hrs|||
 |Home Component|H|2hrs|||
 |Recipes Component|H|2hrs||
 |Recipe Component|H|2hrs|||
@@ -99,8 +99,8 @@ This schedule will be used to keep track of your progress throughout the week an
 |General Styling|M|4hrs|||
 |Media Queries|H|4hrs|||
 |Post-MVP Componenet Additions|L|3hrs|||
-|Post-MVP Styling|L|3rs|||
-| Total | H | 18hrs| 0hrs | 0hrs |
+|Post-MVP Styling|L|3hrs|||
+| Total | H | 37hrs| 0hrs | 0hrs |
 
 ## SWOT Analysis
 
