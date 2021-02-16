@@ -10,9 +10,9 @@ The recipe list will have recipe titles with a photo (if photo exists). Then whe
 
 ## Wireframes
 
-Desktop: https://wireframe.cc/pro/pp/644724e32415092
-Tablet: https://wireframe.cc/pro/pp/7d7cc787e415010
-Mobile: https://wireframe.cc/pro/pp/9d9819bbe415093
+[Desktop Link](https://wireframe.cc/pro/pp/644724e32415092)
+[Tablet Link](https://wireframe.cc/pro/pp/7d7cc787e415010)
+[Mobile](https://wireframe.cc/pro/pp/9d9819bbe415093)
 ## Component Hierarchy
 
 https://app.diagrams.net/#G1JkH1gxs-ZQBVArigTTg3pPn7uZtfDW9y
