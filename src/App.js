@@ -1,11 +1,40 @@
-import logo from "./logo.svg";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { Route } from "react-router-dom";
+import { baseURL, config } from "./services";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import Recipes from "./components/Recipes";
 import "./App.css";
+import Recipe from "./components/Recipe";
 
 function App() {
+  const [recipes, setRecipes] = useState([]);
+  const [toggleFetch, setToggleFetch] = useState(false);
+
+  useEffect(() => {
+    const getRecipes = async () => {
+      const resp = await axios.get(baseURL, config);
+      setRecipes(resp.data.records);
+    };
+    getRecipes();
+  }, [toggleFetch]);
   return (
     <div className="App">
-      <nav></nav>
-      <h1>Getting Started</h1>
+      <Header />
+      <Route exact path="/">
+        <Home recipes={recipes} />
+      </Route>
+      <Route path="/recipes">
+        <div className="recipes-container">
+          {recipes.map((recipe) => (
+            <Recipes key={recipe.id} recipe={recipe} />
+          ))}
+        </div>
+      </Route>
+      <Route path="/recipes:id">
+        <Recipe recipes={recipes} />
+      </Route>
 
       <footer></footer>
     </div>
