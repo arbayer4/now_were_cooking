@@ -53,6 +53,7 @@ The recipe list will have recipe titles with a photo (if photo exists). Then whe
 ### MVP/PostMVP
  
 #### MVP 
+
 *Create functional database on Airtable
 *Use recipe data from airtable using axios Get request
 *Homepage with a few selected recipes, and navigation bar with links to recipe list and recipe submission
@@ -61,6 +62,7 @@ The recipe list will have recipe titles with a photo (if photo exists). Then whe
 
 
 #### PostMVP  
+
 -Add more advanced search features for dietary restrictions, allergens, etc. 
 -Like and dislike button for each recipe. 
 -Sort recipes based on users likes/dislikes
