@@ -5,8 +5,7 @@
 
 ## Project Description
 
-This app will be a recipe catalogue. It will allow users to view a list of recipes, and also contribute recipes. The homepage will have a few select recipes.
-The recipe list will have recipe titles with a photo (if photo exists). Then when the user selects a certain recipe the recipe page will give a detailed description to cook the recipe, including ingredients and steps. 
+This app will be a recipe catalogue. It will allow users to view a list of recipes, and also contribute recipes. The homepage will have a few select recipes. There will be a link for both the recipe list and also to contribute a recipe. The recipe list will have recipe titles with a photo (if photo exists). Then when the user selects a certain recipe the recipe page will give a detailed description to cook the recipe, including ingredients and steps. The contribute a recipe link will lead to a form that a user can fill out with recipe details to add to the list of recipes. 
 
 ## Wireframes
 
