@@ -12,7 +12,7 @@ The recipe list will have recipe titles with a photo (if photo exists). Then whe
 
 [Desktop Link](https://wireframe.cc/pro/pp/644724e32415092) \
 [Tablet Link](https://wireframe.cc/pro/pp/7d7cc787e415010) \
-[Mobile](https://wireframe.cc/pro/pp/9d9819bbe415093) \
+[Mobile](https://wireframe.cc/pro/pp/9d9819bbe415093) 
 ## Component Hierarchy
 
 https://app.diagrams.net/#G1JkH1gxs-ZQBVArigTTg3pPn7uZtfDW9y
@@ -86,8 +86,19 @@ This schedule will be used to keep track of your progress throughout the week an
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Adding Data To Airtable | H | 3hrs|  |  |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| App Component with Routes| H | 3hrs|  |  |
+|Nav Component|2hrs||||
+|Header and Fotter Componennts|2hrs||||
+|Home Component|H|2hrs|||
+|Recipes Component|H|2hrs||
+|Recipe Component|H|2hrs|||
+|Form Component|H|3hrs|||
+|Flex and Grid|H|4hrs|||
+|General Styling|M|4hrs|||
+|Media Queries|H|4hrs|||
+|Post-MVP Componenet Additions|L|3hrs|||
+|Post-MVP Styling|L|3rs|||
+| Total | H | 18hrs| 0hrs | 0hrs |
 
 ## SWOT Analysis
 
