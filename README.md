@@ -63,11 +63,11 @@ The recipe list will have recipe titles with a photo (if photo exists). Then whe
 
 #### PostMVP  
 
--Add more advanced search features for dietary restrictions, allergens, etc. 
--Like and dislike button for each recipe. 
--Sort recipes based on users likes/dislikes
--Delete recipes based on if dislike percentage is too high.
--Display user reviews and allow users to add a review.
+* Add more advanced search features for dietary restrictions, allergens, etc. 
+* Like and dislike button for each recipe. 
+* Sort recipes based on users likes/dislikes
+* Delete recipes based on if dislike percentage is too high.
+* Display user reviews and allow users to add a review.
 
 ## Project Schedule
 
