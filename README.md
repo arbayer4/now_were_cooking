@@ -54,11 +54,11 @@ The recipe list will have recipe titles with a photo (if photo exists). Then whe
  
 #### MVP 
 
-*Create functional database on Airtable
-*Use recipe data from airtable using axios Get request
-*Homepage with a few selected recipes, and navigation bar with links to recipe list and recipe submission
-*Recipe list page will have links to full recipe.
-*Form will allow user to submit new recipe to add to list (axios Post).
+* Create functional database on Airtable
+* Use recipe data from airtable using axios Get request
+* Homepage with a few selected recipes, and navigation bar with links to recipe list and recipe submission
+* Recipe list page will have links to full recipe.
+* Form will allow user to submit new recipe to add to list (axios Post).
 
 
 #### PostMVP  
