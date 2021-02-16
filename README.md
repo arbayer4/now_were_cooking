@@ -76,7 +76,7 @@ This schedule will be used to keep track of your progress throughout the week an
 |  Day | Deliverable | Status
 |---|---| ---|
 |Feb 15| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
-|Feb 16| Project Approval/ Airtable Build Complete Buildout | Incomplete
+|Feb 16| Project Approval/ Complete Airtable/ Setup React App | Incomplete
 |Feb 17| Setup Components/GET and POST/ Basic Clickable | Incomplete 
 |Feb 18| Style Components | Incomplete
 |Feb 19| Media Queries/ Deploy on Netlify/ MVP | Incomplete
