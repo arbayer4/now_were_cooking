@@ -1,9 +1,9 @@
 import Form from "./Form";
-function AddRecipe() {
+function AddRecipe(props) {
   return (
     <div>
-      <h1>Form goes here</h1>
-      <Form />
+      <h1>Add Your Own Recipe:</h1>
+      <Form setToggleFetch={props.setToggleFetch} />
     </div>
   );
 }

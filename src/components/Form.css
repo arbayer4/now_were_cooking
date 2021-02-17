@@ -1,0 +1,23 @@
+.form-container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 50vw;
+  border: 2px solid black;
+}
+.form-container label {
+  display: inline-block;
+  width: 150px;
+  /* text-align: right; */
+}
+.form-container input {
+  display: inline;
+  width: 30%;
+  flex-grow: 3;
+}
+.form-container button {
+  max-width: 100px;
+}
+#form-submit {
+  align-self: unset;
+}

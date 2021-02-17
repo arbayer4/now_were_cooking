@@ -11,7 +11,7 @@ import Recipe from "./components/Recipe";
 
 function App() {
   const [recipes, setRecipes] = useState([]);
-  // const [toggleFetch, setToggleFetch] = useState(false);
+  const [toggleFetch, setToggleFetch] = useState(false);
 
   useEffect(() => {
     const getRecipes = async () => {
@@ -19,7 +19,7 @@ function App() {
       setRecipes(resp.data.records);
     };
     getRecipes();
-  }, []);
+  }, [toggleFetch]);
   return (
     <div className="App">
       <Header />
@@ -48,7 +48,7 @@ function App() {
         )}
       </Route>
       <Route path="/new">
-        <AddRecipe />
+        <AddRecipe setToggleFetch={setToggleFetch} />
       </Route>
 
       <footer></footer>

@@ -19,7 +19,6 @@ function Recipe(props) {
       }
     }
   }, [props.recipes, params.id]);
-  console.log(ingredients);
 
   return (
     <div className="recipe">
@@ -28,14 +27,14 @@ function Recipe(props) {
         <h3>Ingredients:</h3>
         <div>
           {ingredients.map((ingredient) => (
-            <p>-{ingredient}</p>
+            <p>- {ingredient}</p>
           ))}
         </div>
 
         <h3>Steps:</h3>
         {steps.map((step, i) => (
           <p>
-            {i + 1}.{step}
+            {i + 1}. {step}
           </p>
         ))}
       </div>

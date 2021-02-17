@@ -2,42 +2,83 @@ import axios from "axios";
 import { useState } from "react";
 import { baseURL, config } from "../services";
 import { useHistory } from "react-router-dom";
+import "./Form.css";
 
 function Form(props) {
   const [title, setTitle] = useState("");
   const [ingredient, setIngredient] = useState("");
   const [ingredientsList, setIngredientsList] = useState([]);
   const [ingredientCount, setIngredientCount] = useState(1);
+  const [step, setStep] = useState("");
+  const [stepsList, setStepsList] = useState([]);
+  const [stepCount, setStepCount] = useState(1);
+  const history = useHistory();
 
   function addIngredient(e) {
     e.preventDefault();
     setIngredientsList([...ingredientsList, ingredient]);
-    setIngredientCount(ingredientCount + 1);
+    if (ingredient.length) {
+      setIngredientCount(ingredientCount + 1);
+    }
+
     setIngredient("");
   }
+  function addStep(e) {
+    e.preventDefault();
+    setStepsList([...stepsList, step]);
+    setStepCount(stepCount + 1);
+    setStep("");
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const fields = {
+      title,
+      ingredients: ingredientsList.join(";"),
+      steps: stepsList.join(";"),
+    };
+    // console.log(fields);
+    await axios.post(baseURL, { fields }, config);
+    props.setToggleFetch((curr) => !curr);
+    history.push("/recipes");
+  };
 
   return (
-    <form>
-      <label htmlFor="title">Recipe Name</label>
+    <form className="form-container" onSubmit={handleSubmit}>
+      <label htmlFor="recipe-title">Recipe Name:</label>
       <input
         type="text"
-        id="title"
+        id="recipe-title"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
       <div>
-        {ingredientsList.map((ingr) => (
-          <p>-{ingr}</p>
+        {ingredientsList.map((ingr, index) => (
+          <p key={index}>-{ingr}</p>
         ))}
       </div>
-      <label htmlFor="ingredients">Ingredient {ingredientCount}</label>
+      <label htmlFor="ingredients">Ingredient {ingredientCount}:</label>
       <input
         type="text"
+        name="ingredients"
         id="ingredients"
         value={ingredient}
         onChange={(e) => setIngredient(e.target.value)}
       />
       <button onClick={addIngredient}>Add Ingredient!</button>
+      <label htmlFor="form-steps">Step {stepCount}</label>
+      <input
+        type="text"
+        id="form-steps"
+        value={step}
+        onChange={(e) => setStep(e.target.value)}
+      />
+      <button type="button" onClick={addStep}>
+        Add Steps!
+      </button>
+      <button id="form-submit" type="submit">
+        Add Recipe!
+      </button>
     </form>
   );
 }
