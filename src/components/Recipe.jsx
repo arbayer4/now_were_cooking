@@ -26,14 +26,14 @@ function Recipe(props) {
       <div>
         <h3>Ingredients:</h3>
         <div>
-          {ingredients.map((ingredient) => (
-            <p>- {ingredient}</p>
+          {ingredients.map((ingredient, index) => (
+            <p key={index}>- {ingredient}</p>
           ))}
         </div>
 
         <h3>Steps:</h3>
         {steps.map((step, i) => (
-          <p>
+          <p key={i}>
             {i + 1}. {step}
           </p>
         ))}

@@ -1,7 +1,7 @@
 // import { useState } from "react";
 
 function Home(props) {
-  console.log();
+  const recipes = [props.recipes[0], props.recipes[1], props.recipes[2]];
   return (
     <div>
       <img

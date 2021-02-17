@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
-import "./recipes.css";
+import "./Recipes.css";
 
 function Recipes(props) {
   const { title, description, photo } = props.recipe.fields;
-  console.log(props.recipe);
+  const myStyle = {
+    backgroundImage: `url("${photo}")`,
+    backgroundSize: "contain",
+    backgroundRepeat: "no-repeat",
+  };
   return (
-    <div className="recipe" style={{ backgroundImage: `url("${photo}")` }}>
+    <div className="recipe-list-item" style={myStyle}>
       {/* <img src={photo} alt={title} /> */}
       <Link to={`/recipes/${props.recipe.id}`}>{title}</Link>
       <p>{description}</p>

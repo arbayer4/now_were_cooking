@@ -1,11 +1,10 @@
-.recipe {
-  /* flex-basis: 30%; */
-
+.recipe-list-item {
+  width: 30%;
   height: auto;
   background-size: cover;
   color: white;
 }
 
-.recipe a {
+.recipe-list-item a {
   text-decoration: none;
 }
