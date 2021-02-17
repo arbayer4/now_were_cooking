@@ -15,9 +15,9 @@ function Recipe(props) {
 
       if (foundRecipe) {
         setTitle(foundRecipe.fields.title);
+        console.log(title);
         setIngredients(foundRecipe.fields.ingredients);
         setSteps(foundRecipe.fields.steps);
-        console.log(foundRecipe);
       }
     }
   }, [props.recipes, params.id]);

@@ -10,29 +10,34 @@ import Recipe from "./components/Recipe";
 
 function App() {
   const [recipes, setRecipes] = useState([]);
-  const [toggleFetch, setToggleFetch] = useState(false);
+  // const [toggleFetch, setToggleFetch] = useState(false);
 
   useEffect(() => {
     const getRecipes = async () => {
       const resp = await axios.get(baseURL, config);
       setRecipes(resp.data.records);
+      console.log(recipes);
     };
     getRecipes();
-  }, [toggleFetch]);
+  }, []);
   return (
     <div className="App">
       <Header />
       <Route exact path="/">
-        <Home recipes={recipes} />
+        {recipes.length ? (
+          <Home recipes={recipes} />
+        ) : (
+          <h3>Recipe Data Unavailable</h3>
+        )}
       </Route>
-      <Route path="/recipes">
+      <Route exact path="/recipes">
         <div className="recipes-container">
           {recipes.map((recipe) => (
             <Recipes key={recipe.id} recipe={recipe} />
           ))}
         </div>
       </Route>
-      <Route path="/recipes:id">
+      <Route path="/recipes/:id">
         <Recipe recipes={recipes} />
       </Route>
 

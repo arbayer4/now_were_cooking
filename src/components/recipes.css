@@ -1,5 +1,11 @@
 .recipe {
-  flex-basis: 30%;
-  width: 30vw;
+  /* flex-basis: 30%; */
+
+  height: auto;
   background-size: cover;
+  color: white;
+}
+
+.recipe a {
+  text-decoration: none;
 }
