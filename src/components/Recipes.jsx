@@ -7,9 +7,8 @@ function Recipes(props) {
   return (
     <div className="recipe" style={{ backgroundImage: `url("${photo}")` }}>
       {/* <img src={photo} alt={title} /> */}
-      <h3>{title}</h3>
+      <Link to={`/recipes/${props.recipe.id}`}>{title}</Link>
       <p>{description}</p>
-      <Link to={`/recipes/${props.recipe.id}`}>View Recipe</Link>
     </div>
   );
 }

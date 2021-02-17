@@ -1,34 +1,44 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import "./Recipe.css";
 
 function Recipe(props) {
   const [title, setTitle] = useState("");
-  const [ingredients, setIngredients] = useState("");
-  const [steps, setSteps] = useState("");
+  const [ingredients, setIngredients] = useState([]);
+  const [steps, setSteps] = useState([]);
   const params = useParams();
-  console.log(params);
 
   useEffect(() => {
     if (props.recipes.length && params.id) {
       const foundRecipe = props.recipes.find((rec) => params.id === rec.id);
-      console.log(foundRecipe);
 
       if (foundRecipe) {
         setTitle(foundRecipe.fields.title);
-        console.log(title);
-        setIngredients(foundRecipe.fields.ingredients);
-        setSteps(foundRecipe.fields.steps);
+        setIngredients(foundRecipe.fields.ingredients.split(";"));
+        setSteps(foundRecipe.fields.steps.split(";"));
       }
     }
   }, [props.recipes, params.id]);
+  console.log(ingredients);
 
   return (
     <div className="recipe">
       <h3>{title}</h3>
-      <h3>Ingredients:</h3>
-      <p>{ingredients}</p>
-      <h3>Steps:</h3>
-      <p>{steps}</p>
+      <div>
+        <h3>Ingredients:</h3>
+        <div>
+          {ingredients.map((ingredient) => (
+            <p>-{ingredient}</p>
+          ))}
+        </div>
+
+        <h3>Steps:</h3>
+        {steps.map((step, i) => (
+          <p>
+            {i + 1}.{step}
+          </p>
+        ))}
+      </div>
     </div>
   );
 }

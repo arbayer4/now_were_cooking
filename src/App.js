@@ -5,6 +5,7 @@ import { baseURL, config } from "./services";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Recipes from "./components/Recipes";
+import AddRecipe from "./components/AddRecipe";
 import "./App.css";
 import Recipe from "./components/Recipe";
 
@@ -16,7 +17,6 @@ function App() {
     const getRecipes = async () => {
       const resp = await axios.get(baseURL, config);
       setRecipes(resp.data.records);
-      console.log(recipes);
     };
     getRecipes();
   }, []);
@@ -38,7 +38,17 @@ function App() {
         </div>
       </Route>
       <Route path="/recipes/:id">
-        <Recipe recipes={recipes} />
+        {recipes.length ? (
+          <Recipe recipes={recipes} />
+        ) : (
+          <div>
+            <h3>Uh oh... Recipe not found!</h3>
+            <p>Please try again later.</p>
+          </div>
+        )}
+      </Route>
+      <Route path="/new">
+        <AddRecipe />
       </Route>
 
       <footer></footer>

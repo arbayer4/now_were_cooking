@@ -11,7 +11,7 @@ function Header(props) {
         <Link className="link" to="/recipes">
           Recipes
         </Link>
-        <Link className="link" to="./new">
+        <Link className="link" to="/new">
           Contribute Recipe
         </Link>
       </nav>
