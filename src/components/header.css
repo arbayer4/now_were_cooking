@@ -1,20 +1,21 @@
 .nav {
-  box-sizing: border-box;
   height: 80px;
   width: 100vw;
-  background-color: #ee6c4d;
-  font-family: "Poppins", sans-serif;
+  background-color: rgb(237, 199, 109);
 }
 .link {
   font-size: 25px;
-  color: white;
+  color: rgb(220, 112, 73);
   text-decoration: none;
-  padding: 15px 30px;
+  padding: 15px 15px;
   float: right;
+  font-family: "Sigmar One", serif;
 }
 #title {
   float: left;
   font-size: 50px;
-  color: white;
+  margin-left: 20px;
+  color: rgb(54, 70, 82);
   text-decoration: none;
+  font-family: "Monoton", cursive;
 }

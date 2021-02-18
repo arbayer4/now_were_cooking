@@ -1,12 +1,12 @@
 .recipe-list-item {
   text-decoration: none;
   margin: 20px;
-  background-color: #98c1d9;
+  background-color: rgb(96, 170, 167);
   border-radius: 20px;
-  width: 400px;
-  min-height: 200px;
+  width: 75vw;
+  min-height: 37vw;
   height: auto;
-  color: white;
+  color: rgb(252, 246, 235);
   display: grid;
   grid-template-areas:
     "A A B B"
@@ -17,20 +17,24 @@
   grid-area: A;
   border-radius: 20px 0px 0px 20px;
   width: auto;
-  max-height: 200px;
-  min-height: 200px;
-  max-width: 200px;
+  max-height: 37vw;
+  min-height: 37vw;
+  max-width: 37vw;
+  min-width: 37vw;
   object-fit: cover;
   height: auto;
 }
 .recipe-card-title {
+  justify-self: center;
   grid-area: B;
   text-decoration: none;
+  font-size: 30px;
 }
 .recipe-card-description {
   grid-area: C;
   max-width: 200px;
   max-height: 200px;
+  justify-self: center;
   overflow: hidden;
   text-overflow: ellipsis;
 }

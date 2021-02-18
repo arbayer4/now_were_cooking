@@ -6,6 +6,8 @@ import "./Form.css";
 
 function Form(props) {
   const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [isVegetarian, setIsVegetarian] = useState(false);
   const [ingredient, setIngredient] = useState("");
   const [ingredientsList, setIngredientsList] = useState([]);
   const [ingredientCount, setIngredientCount] = useState(1);
@@ -50,8 +52,21 @@ function Form(props) {
         type="text"
         id="recipe-title"
         value={title}
+        required
         onChange={(e) => setTitle(e.target.value)}
       />
+      <label htmlFor="brief-description">Brief Description:</label>
+      <textarea
+        type="text"
+        id="brief-description"
+        rows="6"
+        cols="22"
+        maxLength="200"
+        required
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
+      />
+
       <div>
         {ingredientsList.map((ingr, index) => (
           <p key={index}>-{ingr}</p>
@@ -65,6 +80,7 @@ function Form(props) {
         value={ingredient}
         onChange={(e) => setIngredient(e.target.value)}
       />
+
       <button onClick={addIngredient}>Add Ingredient!</button>
       <label htmlFor="form-steps">Step {stepCount}</label>
       <input
