@@ -14,6 +14,8 @@ function Form(props) {
   const [step, setStep] = useState("");
   const [stepsList, setStepsList] = useState([]);
   const [stepCount, setStepCount] = useState(1);
+  const [photoURL, setPhotoURL] = useState("");
+  const [originalSource, setOriginalSource] = useState("");
   const history = useHistory();
 
   function addIngredient(e) {
@@ -36,8 +38,12 @@ function Form(props) {
     e.preventDefault();
     const fields = {
       title,
+      description,
+      isVegetarian,
       ingredients: ingredientsList.join(";"),
       steps: stepsList.join(";"),
+      originalSource,
+      photoURL,
     };
     // console.log(fields);
     await axios.post(baseURL, { fields }, config);
@@ -66,7 +72,13 @@ function Form(props) {
         value={description}
         onChange={(e) => setDescription(e.target.value)}
       />
-
+      <label htmlFor="is-veggie-box">Vegetarian?</label>
+      <input
+        type="checkbox"
+        id="is-veggie-box"
+        value={isVegetarian}
+        onChange={(e) => setIsVegetarian(e.target.checked)}
+      />
       <div>
         {ingredientsList.map((ingr, index) => (
           <p key={index}>-{ingr}</p>
@@ -80,7 +92,6 @@ function Form(props) {
         value={ingredient}
         onChange={(e) => setIngredient(e.target.value)}
       />
-
       <button onClick={addIngredient}>Add Ingredient!</button>
       <label htmlFor="form-steps">Step {stepCount}</label>
       <input
@@ -92,6 +103,20 @@ function Form(props) {
       <button type="button" onClick={addStep}>
         Add Steps!
       </button>
+      <label htmlFor="form-photo">Photo Url:</label>
+      <input
+        type="text"
+        id="form-photo"
+        value={photoURL}
+        onChange={(e) => setPhotoURL(e.target.value)}
+      />
+      <label htmlFor="source">Recipe Source</label>
+      <input
+        type="text"
+        id="souce"
+        value={originalSource}
+        onChange={(e) => setOriginalSource(e.target.value)}
+      />
       <button id="form-submit" type="submit">
         Add Recipe!
       </button>
