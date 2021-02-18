@@ -8,11 +8,11 @@ function Header(props) {
         <Link id="title" to="/">
           Now We're Cookin'
         </Link>
-        <Link className="link" to="/recipes">
-          Recipes
-        </Link>
         <Link className="link" to="/new">
           Contribute Recipe
+        </Link>
+        <Link className="link" to="/recipes">
+          Recipes
         </Link>
       </nav>
     </header>

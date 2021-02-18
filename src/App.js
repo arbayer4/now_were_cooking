@@ -6,8 +6,9 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import Recipes from "./components/Recipes";
 import AddRecipe from "./components/AddRecipe";
-import "./App.css";
 import Recipe from "./components/Recipe";
+import Footer from "./components/Footer";
+import "./App.css";
 
 function App() {
   const [recipes, setRecipes] = useState([]);
@@ -50,8 +51,7 @@ function App() {
       <Route path="/new">
         <AddRecipe setToggleFetch={setToggleFetch} />
       </Route>
-
-      <footer></footer>
+      <Footer />
     </div>
   );
 }

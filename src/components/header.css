@@ -1,14 +1,16 @@
 .nav {
-  text-align: right;
-  height: 10vh;
+  box-sizing: border-box;
+  height: 80px;
   width: 100vw;
-  background-color: blue;
+  background-color: #ee6c4d;
+  font-family: "Poppins", sans-serif;
 }
 .link {
-  font-size: 30px;
+  font-size: 25px;
   color: white;
   text-decoration: none;
   padding: 15px 30px;
+  float: right;
 }
 #title {
   float: left;
