@@ -1,10 +1,41 @@
-.recipe {
-  color: black;
+.detailed-recipe-container {
+  display: grid;
+  width: 80vw;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "Head Head "
+    "Photo Ing"
+    "Step Step";
+  margin-bottom: 20px;
 }
 
-detailed-recipe-container {
-  display: grid;
-  grid-template-areas:
-    "H H H H H H H H"
-    "P P P P";
+.detailed-recipe-title {
+  grid-area: Head;
+  /* grid-column: 1 / 9;
+  grid-row: 1 / 2; */
+}
+.detailed-recipe-photo {
+  grid-area: Photo;
+  max-width: 500px;
+  height: auto;
+}
+.detailed-recipe-photo img {
+  object-fit: cover;
+  max-width: 40vw;
+  max-height: auto;
+}
+.detailed-recipe-ingredients {
+  grid-area: Ing;
+  /* grid-column: 5 / 9;
+  grid-row: 2 / 6; */
+  display: flex;
+  flex-direction: column;
+}
+.detailed-recipe-steps {
+  grid-area: Step;
+  /* grid-column: 1 / 9;
+  grid-row: 6 / 8; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

@@ -23,17 +23,19 @@ function Recipe(props) {
   }, [props.recipes, params.id]);
 
   return (
-    <div className="recipe">
-      <h3>{title}</h3>
-      <div>
+    <div className="detailed-recipe-container">
+      <h3 className="detailed-recipe-title">{title}</h3>
+      <div className="detailed-recipe-photo">
         <img src={photoURL} alt={title} />
-        <h3>Ingredients:</h3>
-        <div>
-          {ingredients.map((ingredient, index) => (
-            <p key={index}>- {ingredient}</p>
-          ))}
-        </div>
+      </div>
 
+      <div className="detailed-recipe-ingredients">
+        <h3>Ingredients:</h3>
+        {ingredients.map((ingredient, index) => (
+          <p key={index}>- {ingredient}</p>
+        ))}
+      </div>
+      <div className=".detailed-recipe-steps">
         <h3>Steps:</h3>
         {steps.map((step, i) => (
           <p key={i}>
