@@ -1,31 +1,21 @@
 #featured-recipes-container {
-  display: grid;
-  box-sizing: border-box;
-  grid-template-columns: 25vw;
-  min-height: 100vh;
-
-  padding: 20px;
-  grid-template-areas:
-    "A A B B"
-    "A A B B"
-    "A A C C"
-    "A A C C";
+  /* display: grid; */
+  /* background-color: rgb(96, 170, 167); */
+  /* box-sizing: border-box;
+  grid-template-columns: 25vw; */
+  /* min-height: 100vh; */
 }
-
-.best {
-  background-color: red;
-  grid-area: A;
-  margin: 10px;
-  display: grid;
+#featured-recipes-container img {
+  width: max-content;
+  height: auto;
 }
-
-.better {
-  background-color: yellow;
-  grid-area: B;
-  margin: 10px;
+#featured-recipes-container h1 {
+  position: relative;
+  top: 60px;
+  color: rgb(252, 246, 235);
+  background-color: rgba(0, 0, 0, 0.5);
 }
-.good {
-  background-color: blue;
-  grid-area: C;
-  margin: 10px;
+#featured-recipes-container p {
+  position: relative;
+  bottom: 20px;
 }

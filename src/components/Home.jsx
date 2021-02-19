@@ -2,15 +2,18 @@
 import "./Home.css";
 
 function Home(props) {
-  const recipes = [props.recipes[0], props.recipes[1], props.recipes[2]];
-  console.log(recipes);
+  // const recipe = props.recipes[0].fields;
+  // console.log(recipe);
+  const { title, description, photoURL } = props.recipes[0].fields;
+  // console.log(props.recipes[0].fields);
   return (
-    <div id="featured-recipes-container">
-      <div className="best">
-        <img src={recipes[0].fields.photo} alt="recipes[0].fields.title" />
+    <div>
+      <h1>Recipe of the Day:</h1>
+      <div id="featured-recipes-container">
+        <h1>{title}</h1>
+        <img src={photoURL} alt={title} />
+        <p>{description}</p>
       </div>
-      <div className="better">Better</div>
-      <div className="good">Good</div>
     </div>
   );
 }
