@@ -35,7 +35,7 @@ function Recipe(props) {
           <p key={index}>- {ingredient}</p>
         ))}
       </div>
-      <div className=".detailed-recipe-steps">
+      <div className="detailed-recipe-steps">
         <h3>Steps:</h3>
         {steps.map((step, i) => (
           <p key={i}>

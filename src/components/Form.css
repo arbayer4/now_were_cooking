@@ -17,6 +17,8 @@
 }
 .form-header {
   grid-area: H;
+  font-family: "sigmar one";
+  color: rgb(237, 199, 109);
 }
 .form-container {
   display: flex;
@@ -30,6 +32,13 @@
   grid-area: F;
   background-color: rgb(237, 199, 109);
 }
+.form-container label,
+input,
+button {
+  margin: 5px;
+  min-width: 50%;
+  max-width: 75%;
+}
 .form-ingredients-list {
   grid-area: I;
   background-color: rgb(237, 199, 109);
@@ -41,6 +50,9 @@
   background-color: rgb(237, 199, 109);
   border-radius: 15px;
   margin: 15px;
+}
+.form-steps-list p {
+  margin: 0px 5px;
 }
 .form-container label {
   display: inline-block;

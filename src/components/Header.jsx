@@ -1,7 +1,10 @@
+// import { useMediaPredicate } from "react-media-hook";
 import { Link } from "react-router-dom";
+// import(useMediaPredicate) from "react-media-hook";
 import "./Header.css";
 
 function Header(props) {
+  // const = bigg
   return (
     <header>
       <nav className="nav">
