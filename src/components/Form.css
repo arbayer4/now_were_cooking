@@ -1,10 +1,46 @@
+.add-recipe-container {
+  width: 75vw;
+
+  box-sizing: border-box;
+  border-radius: 15px;
+  background-color: rgb(96, 170, 167);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "H H H H"
+    "F F I I"
+    "F F I I"
+    "F F S S"
+    "F F S S";
+  /* grid-gap: 10px; */
+  margin: 15px 0px 70px 0px;
+}
+.form-header {
+  grid-area: H;
+}
 .form-container {
   display: flex;
   flex-flow: column;
   align-items: center;
-  width: 50vw;
+  /* width: 40vw; */
+  box-sizing: border-box;
+  margin: 15px;
+  /* padding: 10px; */
   border-radius: 15px;
-  background-color: rgb(96, 170, 167);
+  grid-area: F;
+  background-color: rgb(237, 199, 109);
+}
+.form-ingredients-list {
+  grid-area: I;
+  background-color: rgb(237, 199, 109);
+  border-radius: 15px;
+  margin: 15px;
+}
+.form-steps-list {
+  grid-area: S;
+  background-color: rgb(237, 199, 109);
+  border-radius: 15px;
+  margin: 15px;
 }
 .form-container label {
   display: inline-block;

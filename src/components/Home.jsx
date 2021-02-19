@@ -5,7 +5,7 @@ function Home(props) {
   // const recipe = props.recipes[0].fields;
   // console.log(recipe);
   const { title, description, photoURL } = props.recipes[0].fields;
-  // console.log(props.recipes[0].fields);
+  //Next up-Maybe make photo a background, then style from there.
   return (
     <div>
       <h1>Recipe of the Day:</h1>

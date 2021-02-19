@@ -6,6 +6,7 @@ function Recipe(props) {
   const [title, setTitle] = useState("");
   const [ingredients, setIngredients] = useState([]);
   const [steps, setSteps] = useState([]);
+  const [photoURL, setPhotoURL] = useState("");
   const params = useParams();
 
   useEffect(() => {
@@ -16,6 +17,7 @@ function Recipe(props) {
         setTitle(foundRecipe.fields.title);
         setIngredients(foundRecipe.fields.ingredients.split(";"));
         setSteps(foundRecipe.fields.steps.split(";"));
+        setPhotoURL(foundRecipe.fields.photoURL);
       }
     }
   }, [props.recipes, params.id]);
@@ -24,6 +26,7 @@ function Recipe(props) {
     <div className="recipe">
       <h3>{title}</h3>
       <div>
+        <img src={photoURL} alt={title} />
         <h3>Ingredients:</h3>
         <div>
           {ingredients.map((ingredient, index) => (

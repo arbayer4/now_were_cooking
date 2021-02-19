@@ -52,75 +52,90 @@ function Form(props) {
   };
 
   return (
-    <form className="form-container" onSubmit={handleSubmit}>
-      <label htmlFor="recipe-title">Recipe Name:</label>
-      <input
-        type="text"
-        id="recipe-title"
-        value={title}
-        required
-        onChange={(e) => setTitle(e.target.value)}
-      />
-      <label htmlFor="brief-description">Brief Description:</label>
-      <textarea
-        type="text"
-        id="brief-description"
-        rows="6"
-        cols="22"
-        maxLength="200"
-        required
-        value={description}
-        onChange={(e) => setDescription(e.target.value)}
-      />
-      <label htmlFor="is-veggie-box">Vegetarian?</label>
-      <input
-        type="checkbox"
-        id="is-veggie-box"
-        value={isVegetarian}
-        onChange={(e) => setIsVegetarian(e.target.checked)}
-      />
-      <div>
+    <div className="add-recipe-container">
+      <h1 className="form-header">Add Recipe:</h1>
+      <form className="form-container" onSubmit={handleSubmit}>
+        <label htmlFor="recipe-title">Recipe Name:</label>
+        <input
+          type="text"
+          id="recipe-title"
+          value={title}
+          required
+          onChange={(e) => setTitle(e.target.value)}
+        />
+        <label htmlFor="brief-description">Brief Description:</label>
+        <textarea
+          type="text"
+          id="brief-description"
+          rows="6"
+          cols="22"
+          maxLength="200"
+          required
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+        />
+        <label htmlFor="is-veggie-box">Vegetarian?</label>
+        <input
+          type="checkbox"
+          id="is-veggie-box"
+          value={isVegetarian}
+          onChange={(e) => setIsVegetarian(e.target.checked)}
+        />
+
+        <label htmlFor="ingredients">Ingredient {ingredientCount}:</label>
+        <input
+          type="text"
+          name="ingredients"
+          id="ingredients"
+          value={ingredient}
+          onChange={(e) => setIngredient(e.target.value)}
+        />
+        <button onClick={addIngredient} type="button">
+          Add Ingredient!
+        </button>
+        <label htmlFor="form-steps">Step {stepCount}</label>
+        <input
+          type="text"
+          id="form-steps"
+          value={step}
+          onChange={(e) => setStep(e.target.value)}
+        />
+        <button type="button" onClick={addStep}>
+          Add Steps!
+        </button>
+        <label htmlFor="form-photo">Photo Url:</label>
+        <input
+          type="text"
+          id="form-photo"
+          value={photoURL}
+          onChange={(e) => setPhotoURL(e.target.value)}
+        />
+        <label htmlFor="source">Recipe Source</label>
+        <input
+          type="text"
+          id="souce"
+          value={originalSource}
+          onChange={(e) => setOriginalSource(e.target.value)}
+        />
+        <button id="form-submit" type="submit">
+          Add Recipe!
+        </button>
+      </form>
+      <div className="form-ingredients-list">
+        <h3>Your Ingredients:</h3>
         {ingredientsList.map((ingr, index) => (
           <p key={index}>-{ingr}</p>
         ))}
       </div>
-      <label htmlFor="ingredients">Ingredient {ingredientCount}:</label>
-      <input
-        type="text"
-        name="ingredients"
-        id="ingredients"
-        value={ingredient}
-        onChange={(e) => setIngredient(e.target.value)}
-      />
-      <button onClick={addIngredient}>Add Ingredient!</button>
-      <label htmlFor="form-steps">Step {stepCount}</label>
-      <input
-        type="text"
-        id="form-steps"
-        value={step}
-        onChange={(e) => setStep(e.target.value)}
-      />
-      <button type="button" onClick={addStep}>
-        Add Steps!
-      </button>
-      <label htmlFor="form-photo">Photo Url:</label>
-      <input
-        type="text"
-        id="form-photo"
-        value={photoURL}
-        onChange={(e) => setPhotoURL(e.target.value)}
-      />
-      <label htmlFor="source">Recipe Source</label>
-      <input
-        type="text"
-        id="souce"
-        value={originalSource}
-        onChange={(e) => setOriginalSource(e.target.value)}
-      />
-      <button id="form-submit" type="submit">
-        Add Recipe!
-      </button>
-    </form>
+      <div className="form-steps-list">
+        <h3>Your Directions:</h3>
+        {stepsList.map((step, index) => (
+          <p key={index}>
+            {index + 1}. {step}
+          </p>
+        ))}
+      </div>
+    </div>
   );
 }
 
