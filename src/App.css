@@ -9,6 +9,7 @@
   background-size: cover; */
   background-color: rgb(252, 246, 235);
   min-height: 100vh;
+  font-family: "Vidaloka", sans-serif;
 }
 
 .recipes-container {

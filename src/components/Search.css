@@ -1,0 +1,12 @@
+.search-box {
+  /* display: flex; */
+  background-color: rgb(96, 170, 167);
+  z-index: 2;
+  width: 80vw;
+  height: 80vw;
+  display: none;
+}
+.search-selector label,
+input {
+  display: inline;
+}

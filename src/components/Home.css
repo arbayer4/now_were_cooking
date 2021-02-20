@@ -1,5 +1,6 @@
 #featured-recipes-container {
   border-radius: 50px;
+  text-decoration: none;
   /* display: grid; */
   /* background-color: rgb(96, 170, 167); */
   /* box-sizing: border-box;
@@ -9,6 +10,7 @@
 #featured-recipes-container img {
   width: 500px;
   height: auto;
+  margin-bottom: 60px;
 }
 #featured-recipes-container h1 {
   position: relative;
@@ -19,6 +21,14 @@
 }
 #featured-recipes-container p {
   position: relative;
-  bottom: 70px;
+  bottom: 120px;
   width: 500px;
+  color: rgb(252, 246, 235);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+a {
+  text-decoration: none;
+}
+a :hover {
+  text-decoration: underline;
 }
