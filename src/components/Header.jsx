@@ -1,5 +1,6 @@
 // import { useMediaPredicate } from "react-media-hook";
 import { Link } from "react-router-dom";
+import Burger from "./Burger";
 // import(useMediaPredicate) from "react-media-hook";
 import "./Header.css";
 
@@ -17,6 +18,7 @@ function Header(props) {
         <Link className="link" to="/recipes">
           Recipes
         </Link>
+        <Burger />
       </nav>
     </header>
   );

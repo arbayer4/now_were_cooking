@@ -1,7 +1,8 @@
 .nav {
   height: 80px;
-  width: 100vw;
-  background-color: rgb(237, 199, 109);
+  width: 98vw;
+  /* background-color: rgb(237, 199, 109); */
+  border-bottom: 5px solid rgb(237, 199, 109);
 }
 .link {
   font-size: 2.25vw;

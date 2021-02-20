@@ -8,21 +8,21 @@
   /* min-height: 100vh; */
 }
 #featured-recipes-container img {
-  width: 500px;
+  width: 50vw;
   height: auto;
   margin-bottom: 60px;
 }
 #featured-recipes-container h1 {
   position: relative;
   top: 60px;
-  width: 500px;
+  width: 50vw;
   color: rgb(252, 246, 235);
   background-color: rgba(0, 0, 0, 0.5);
 }
 #featured-recipes-container p {
   position: relative;
   bottom: 120px;
-  width: 500px;
+  width: 50vw;
   color: rgb(252, 246, 235);
   background-color: rgba(0, 0, 0, 0.5);
 }

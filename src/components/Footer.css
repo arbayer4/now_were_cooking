@@ -1,7 +1,20 @@
 footer {
   width: 100vw;
-  height: 60px;
-  background-color: rgb(237, 199, 109);
+  height: auto;
+  /* background-color: rgb(237, 199, 109); */
+  background-color: rgb(54, 70, 82);
+  color: rgb(252, 246, 235);
+  /* border-top: 5px solid rgb(237, 199, 109); */
+
   position: absolute;
   bottom: 0px;
+}
+footer img {
+  width: 30px;
+  height: auto;
+  margin: 10px 5px 0px 5px;
+}
+
+footer p {
+  margin: 5px;
 }
