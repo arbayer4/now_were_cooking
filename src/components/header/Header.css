@@ -1,0 +1,22 @@
+.nav {
+  height: 80px;
+  width: 98vw;
+  /* background-color: rgb(237, 199, 109); */
+  border-bottom: 5px solid rgb(237, 199, 109);
+}
+.link {
+  font-size: 2.25vw;
+  color: rgb(220, 112, 73);
+  text-decoration: none;
+  padding: 15px 15px;
+  float: right;
+  font-family: "Sigmar One", serif;
+}
+#title {
+  float: left;
+  font-size: 4.5vw;
+  margin-left: 20px;
+  color: rgb(54, 70, 82);
+  text-decoration: none;
+  font-family: "Monoton", cursive;
+}
