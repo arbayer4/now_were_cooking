@@ -12,13 +12,15 @@ function Home(props) {
   const { title, description, photoURL } = featured.fields;
   //Next up-Maybe make photo a background, then style from there.
   return (
-    <div>
-      <Search />
+    <div className="home-container">
       <h1>Recipe of the Day:</h1>
       <Link to={`/recipes/${featured.id}`}>
-        <div id="featured-recipes-container">
+        <div
+          style={{ backgroundImage: `url(${photoURL})` }}
+          id="featured-recipes-container"
+        >
           <h1>{title}</h1>
-          <img src={photoURL} alt={title} />
+          {/* <img src={photoURL} alt={title} /> */}
           <p>{description}</p>
         </div>
       </Link>

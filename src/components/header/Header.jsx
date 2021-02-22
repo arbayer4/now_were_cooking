@@ -9,10 +9,14 @@ function Header(props) {
   return (
     <header>
       <nav className="nav">
-        <Link id="title" to="/">
-          Now We're Cookin'
-        </Link>
-        <Burger />
+        <div className="header-container">
+          <Link id="title" to="/">
+            Now We're Cookin'
+          </Link>
+          <div className="right-nav-container">
+            <Burger />
+          </div>
+        </div>
       </nav>
     </header>
   );
