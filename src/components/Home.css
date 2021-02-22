@@ -1,5 +1,9 @@
 .home-container {
-  height: 100vh;
+  /* height: vh; */
+  margin-bottom: 105px;
+}
+.home-container h1 {
+  color: rgb(220, 112, 73);
 }
 #featured-recipes-container {
   width: 50vw;
@@ -28,6 +32,7 @@
   /* position: relative;
   top: 60px; */
   box-sizing: border-box;
+  /* font-family: "Roboto", sans-serif; */
   width: 100%;
   margin-top: 0;
   padding: 10px;
@@ -48,3 +53,5 @@ a {
 a :hover {
   text-decoration: underline;
 }
+/* @media (max-width)
+.home-container { */

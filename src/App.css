@@ -9,14 +9,23 @@
   background-size: cover; */
   background-color: rgb(252, 246, 235);
   min-height: 100vh;
-  font-family: "Vidaloka", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+.App h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Sigmar One", serif;
+  /* color: rgb(54, 70, 82); */
 }
 
 .recipes-container {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
   justify-content: space-around;
   align-items: center;
   width: 100vw;
-  margin-bottom: 60px;
+  margin-bottom: 105px;
 }

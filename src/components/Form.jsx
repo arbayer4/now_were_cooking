@@ -16,6 +16,12 @@ function Form(props) {
   const [stepCount, setStepCount] = useState(1);
   const [photoURL, setPhotoURL] = useState("");
   const [originalSource, setOriginalSource] = useState("");
+  // const [dinner, setDinner] = useState("");
+  // const [breakfast, setBreakfast] = useState("");
+  // const [lunch, setLunch] = useState("");
+  // const [dessert, setDessert] = useState("");
+  // const [snack, setSnack] = useState("");
+  const [types, setTypes] = useState([]);
   const history = useHistory();
 
   function addIngredient(e) {
@@ -33,9 +39,16 @@ function Form(props) {
     setStepCount(stepCount + 1);
     setStep("");
   }
+  function addType(meal) {
+    setTypes((arr) => [...types, meal].filter((type) => type.length > 0));
+  }
+  function removeType(meal) {
+    setTypes((arr) => [...types].filter((type) => type !== meal));
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     const fields = {
       title,
       description,
@@ -44,6 +57,7 @@ function Form(props) {
       steps: stepsList.join(";"),
       originalSource,
       photoURL,
+      types,
     };
     // console.log(fields);
     await axios.post(baseURL, { fields }, config);
@@ -74,13 +88,15 @@ function Form(props) {
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         />
-        <label htmlFor="is-veggie-box">Vegetarian?</label>
-        <input
-          type="checkbox"
-          id="is-veggie-box"
-          value={isVegetarian}
-          onChange={(e) => setIsVegetarian(e.target.checked)}
-        />
+        <div className="button-label-div">
+          <input
+            type="checkbox"
+            id="is-veggie-box"
+            value={isVegetarian}
+            onChange={(e) => setIsVegetarian(e.target.checked)}
+          />
+          <label htmlFor="is-veggie-box">Vegetarian?</label>
+        </div>
 
         <label htmlFor="ingredients">Ingredient {ingredientCount}:</label>
         <input
@@ -94,9 +110,11 @@ function Form(props) {
           Add Ingredient!
         </button>
         <label htmlFor="form-steps">Step {stepCount}</label>
-        <input
+        <textarea
           type="text"
           id="form-steps"
+          rows="6"
+          maxLength="200"
           value={step}
           onChange={(e) => setStep(e.target.value)}
         />
@@ -117,6 +135,66 @@ function Form(props) {
           value={originalSource}
           onChange={(e) => setOriginalSource(e.target.value)}
         />
+        <p>Select all that apply:</p>
+        <div className="type-container">
+          <div className="button-label-div">
+            <input
+              type="checkbox"
+              id="dinner-box"
+              // value={dinner}
+              onChange={(e) =>
+                e.target.checked ? addType("Dinner") : removeType("Dinner")
+              }
+            />
+            <label htmlFor="dinner-box">Dinner</label>
+          </div>
+          <div className="button-label-div">
+            <input
+              type="checkbox"
+              id="lunch-box"
+              // value={lunch}
+              onChange={(e) =>
+                e.target.checked ? addType("Lunch") : removeType("Lunch")
+              }
+            />
+            <label htmlFor="lunch-box">Lunch</label>
+          </div>
+          <div className="button-label-div">
+            <input
+              type="checkbox"
+              id="breakfast-box"
+              // value={breakfast}
+              onChange={(e) =>
+                e.target.checked
+                  ? addType("Breakfast")
+                  : removeType("Breakfast")
+              }
+            />
+            <label htmlFor="breakfast-box">Breakfast</label>
+          </div>
+          <div className="button-label-div">
+            <input
+              type="checkbox"
+              id="dessert-box"
+              // value={dessert}
+              onChange={(e) =>
+                e.target.checked ? addType("Dessert") : removeType("Dessert")
+              }
+            />
+            <label htmlFor="dessert-box">Dessert</label>
+          </div>
+          <div className="button-label-div">
+            <input
+              type="checkbox"
+              id="snack-box"
+              // value={snack}
+              onChange={(e) =>
+                e.target.checked ? addType("Snack") : removeType("Snack")
+              }
+            />
+            <label htmlFor="snack-box">Snack</label>
+          </div>
+        </div>
         <button id="form-submit" type="submit">
           Add Recipe!
         </button>

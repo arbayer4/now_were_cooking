@@ -21,6 +21,24 @@ function App() {
     };
     getRecipes();
   }, [toggleFetch]);
+
+  function deleteRecipes() {
+    const remove = async (id) => {
+      const recipeURl = `${baseURL}/${id}`;
+
+      await axios.delete(recipeURl, config);
+    };
+    for (let i = 0; i < recipes.length; i++) {
+      if (!recipes[i].fields.title) {
+        remove(recipes[i].id);
+      } else {
+        console.log(recipes[i].fields.title);
+      }
+    }
+    // setToggleFetch(!toggleFetch);
+  }
+  deleteRecipes();
+  // console.log(recipes);
   return (
     <div className="App">
       <Header />

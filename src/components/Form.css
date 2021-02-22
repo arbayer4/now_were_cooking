@@ -13,7 +13,8 @@
     "F F S S"
     "F F S S";
   /* grid-gap: 10px; */
-  margin: 15px 0px 70px 0px;
+  margin: 20px 0px 105px 0px;
+  padding: 15px;
 }
 .form-header {
   grid-area: H;
@@ -27,23 +28,21 @@
   /* width: 40vw; */
   box-sizing: border-box;
   margin: 15px;
-  /* padding: 10px; */
+  padding: 15px;
   border-radius: 15px;
   grid-area: F;
   background-color: rgb(237, 199, 109);
 }
-.form-container label,
-input,
-button {
-  margin: 5px;
-  min-width: 50%;
-  max-width: 75%;
+.form-container label {
+  margin: 10px 5px 3px 5px;
+  /* min-width: 50%;
+  max-width: 75%; */
 }
 .form-ingredients-list {
   grid-area: I;
   background-color: rgb(237, 199, 109);
   border-radius: 15px;
-  margin: 15px;
+  margin: 5px;
 }
 .form-steps-list {
   grid-area: S;
@@ -52,24 +51,50 @@ button {
   margin: 15px;
 }
 .form-steps-list p {
-  margin: 0px 5px;
+  margin: 5px;
 }
-.form-container label {
-  display: inline-block;
-  width: 150px;
-  /* text-align: right; */
-}
-.form-container input {
-  display: inline;
-  width: 30%;
-  flex-grow: 3;
-}
+
 .form-container button {
+  margin: 5px;
   max-width: 100px;
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(252, 246, 235);
+  border-radius: 3px;
+  border: 3px solid rgb(96, 170, 167);
 }
 #form-submit {
   align-self: unset;
 }
 textarea {
   resize: none;
+  width: 80%;
+}
+input[type="text"] {
+  width: 80%;
+}
+.form-container p {
+  margin: 15px 5px 5px 5px;
+}
+.type-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 10px;
+}
+.button-label-div {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .add-recipe-container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+  .form-container,
+  .form-ingredients-list,
+  .form-steps-list {
+    width: 90%;
+  }
 }

@@ -1,11 +1,11 @@
 .nav {
   height: 80px;
-  width: 98vw;
+  width: 96vw;
   /* background-color: rgb(237, 199, 109); */
   border-bottom: 5px solid rgb(237, 199, 109);
 }
 .link {
-  font-size: 18px;
+  font-size: 16px;
   color: rgb(220, 112, 73);
   text-decoration: none;
   padding: 15px 15px;
