@@ -1,0 +1,11 @@
+.list-recipes-container {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.filters-container {
+  display: flex;
+  flex-flow: column nowrap;
+  box-sizing: border-box;
+
+  border-right: 1px solid black;
+}

@@ -2,6 +2,9 @@ import { useState } from "react";
 import styled from "styled-components";
 import RightNav from "./RightNav";
 
+//This whole burger was learned from this:
+//https://www.youtube.com/watch?v=GGkBwpxV7AI
+
 const StyledBurger = styled.div`
   width: 2rem;
   height: 2rem;
@@ -16,6 +19,7 @@ const StyledBurger = styled.div`
     display: flex;
     justify-content: space-around;
     flex-flow: column nowrap;
+    align-items: flex-end;
   }
 
   div {
@@ -48,7 +52,7 @@ const Burger = () => {
         <div />
         <div />
       </StyledBurger>
-      <RightNav open={open} />
+      <RightNav open={open} setOpen={setOpen} />
     </div>
   );
 };

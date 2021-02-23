@@ -4,10 +4,11 @@ import { Route } from "react-router-dom";
 import { baseURL, config } from "./services";
 import Header from "./components/header/Header";
 import Home from "./components/Home";
-import Recipes from "./components/Recipes";
+// import Recipes from "./components/Recipes";
 import AddRecipe from "./components/AddRecipe";
 import Recipe from "./components/Recipe";
 import Footer from "./components/Footer";
+import ListRecipes from "./components/ListRecipes";
 import "./App.css";
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
     getRecipes();
   }, [toggleFetch]);
 
-  function deleteRecipes() {
+  async function deleteRecipes() {
     const remove = async (id) => {
       const recipeURl = `${baseURL}/${id}`;
 
@@ -38,7 +39,7 @@ function App() {
     // setToggleFetch(!toggleFetch);
   }
   deleteRecipes();
-  // console.log(recipes);
+  console.log(recipes);
   return (
     <div className="App">
       <Header />
@@ -50,11 +51,7 @@ function App() {
         )}
       </Route>
       <Route exact path="/recipes">
-        <div className="recipes-container">
-          {recipes.map((recipe) => (
-            <Recipes key={recipe.id} recipe={recipe} />
-          ))}
-        </div>
+        <ListRecipes recipes={recipes} />
       </Route>
       <Route path="/recipes/:id">
         {recipes.length ? (

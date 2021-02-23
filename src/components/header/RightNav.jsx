@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+//This styled components was learned from this:
+//https://www.youtube.com/watch?v=GGkBwpxV7AI
 const Ul = styled.ul`
   list-style: none;
   display: flex;
@@ -29,17 +31,26 @@ const Ul = styled.ul`
     }
   }
 `;
+
 function RightNav(props) {
   return (
     <Ul open={props.open}>
       {/* <li></li> */}
       <li>
-        <Link className="link" to="/recipes">
+        <Link
+          className="link"
+          to="/recipes"
+          onClick={() => props.setOpen(!props.open)}
+        >
           Recipes
         </Link>
       </li>
       <li>
-        <Link className="link" to="/new">
+        <Link
+          className="link"
+          to="/new"
+          onClick={() => props.setOpen(!props.open)}
+        >
           Contribute Recipe
         </Link>
       </li>

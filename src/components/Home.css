@@ -1,6 +1,10 @@
 .home-container {
   /* height: vh; */
   margin-bottom: 105px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
 }
 .home-container h1 {
   color: rgb(220, 112, 73);
@@ -32,7 +36,7 @@
   /* position: relative;
   top: 60px; */
   box-sizing: border-box;
-  /* font-family: "Roboto", sans-serif; */
+  font-family: "Roboto", sans-serif;
   width: 100%;
   margin-top: 0;
   padding: 10px;
@@ -53,5 +57,8 @@ a {
 a :hover {
   text-decoration: underline;
 }
-/* @media (max-width)
-.home-container { */
+@media (max-width: 768px) {
+  #featured-recipes-container h1 {
+    font-size: 20px;
+  }
+}

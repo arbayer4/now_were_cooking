@@ -26,6 +26,6 @@ h6 {
   flex-flow: column nowrap;
   justify-content: space-around;
   align-items: center;
-  width: 100vw;
+  /* width: 100vw; */
   margin-bottom: 105px;
 }
