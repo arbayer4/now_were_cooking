@@ -26,24 +26,13 @@ function App() {
     <div className="App">
       <Header />
       <Route exact path="/">
-        {recipes.length ? (
-          <Home recipes={recipes} />
-        ) : (
-          <h3>Recipe Data Unavailable</h3>
-        )}
+        <Home recipes={recipes} />
       </Route>
       <Route exact path="/recipes">
         <ListRecipes recipes={recipes} />
       </Route>
       <Route path="/recipes/:id">
-        {recipes.length ? (
-          <Recipe recipes={recipes} />
-        ) : (
-          <div>
-            <h3>Uh oh... Recipe not found!</h3>
-            <p>Please try again later.</p>
-          </div>
-        )}
+        <Recipe recipes={recipes} />
       </Route>
       <Route path="/new">
         <AddRecipe setToggleFetch={setToggleFetch} />

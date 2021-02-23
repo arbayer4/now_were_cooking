@@ -54,7 +54,6 @@ function Form(props) {
       photoURL,
       types,
     };
-    // console.log(fields);
     await axios.post(baseURL, { fields }, config);
     props.setToggleFetch((curr) => !curr);
     history.push("/recipes");
