@@ -65,15 +65,15 @@ This app will be a recipe catalogue. It will allow users to view a list of recip
 
 This schedule will be used to keep track of your progress throughout the week and align with our expectations. Here's an example.
 
-| Day    | Deliverable                                          | Status     |
-| ------ | ---------------------------------------------------- | ---------- |
-| Feb 15 | Prompt / Wireframes / Priority Matrix / Timeframes   | Complete   |
-| Feb 16 | Project Approval/ Complete Airtable/ Setup React App | Incomplete |
-| Feb 17 | Setup Components/GET and POST/ Basic Clickable       | Incomplete |
-| Feb 18 | Style Components                                     | Incomplete |
-| Feb 19 | Media Queries/ Deploy on Netlify/ MVP                | Incomplete |
-| Feb 22 | Post MVP                                             | Incomplete |
-| Feb 23 | Presentations                                        | Incomplete |
+| Day    | Deliverable                                          | Status        |
+| ------ | ---------------------------------------------------- | ------------- |
+| Feb 15 | Prompt / Wireframes / Priority Matrix / Timeframes   | Complete      |
+| Feb 16 | Project Approval/ Complete Airtable/ Setup React App | Complete      |
+| Feb 17 | Setup Components/GET and POST/ Basic Clickable       | Complete      |
+| Feb 18 | Style Components                                     | Complete      |
+| Feb 19 | Media Queries/ Deploy on Netlify/ MVP                | Complete      |
+| Feb 22 | Post MVP                                             | Semi-Complete |
+| Feb 23 | Presentations                                        | Incomplete    |
 
 ## Timeframes
 
