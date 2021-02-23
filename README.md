@@ -79,20 +79,21 @@ This schedule will be used to keep track of your progress throughout the week an
 
 | Component                     | Priority | Estimated Time | Time Invested | Actual Time |
 | ----------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Adding Data To Airtable       |    H     |      3hrs      |               |             |
-| App Component with Routes     |    H     |      3hrs      |               |             |
-| Nav Component                 |    H     |      2hrs      |               |             |
-| Header and Fotter Componennts |    H     |      2hrs      |               |             |
-| Home Component                |    H     |      2hrs      |               |             |
-| Recipes Component             |    H     |      2hrs      |               |
-| Recipe Component              |    H     |      2hrs      |               |             |
-| Form Component                |    H     |      3hrs      |               |             |
-| Flex and Grid                 |    H     |      4hrs      |               |             |
-| General Styling               |    M     |      4hrs      |               |             |
-| Media Queries                 |    H     |      4hrs      |               |             |
-| Post-MVP Componenet Additions |    L     |      3hrs      |               |             |
-| Post-MVP Styling              |    L     |      3hrs      |               |             |
-| Total                         |    H     |     37hrs      |     0hrs      |    0hrs     |
+| Adding Data To Airtable       |    H     |      3hrs      |      1hr      |     1hr     |
+| App Component with Routes     |    H     |      3hrs      |     2hrs      |    2hrs     |
+| Right-Nav Component           |    H     |      2hrs      |    1.5hrs     |   1.5hrs    |
+| Hamburger Component           |    L     |      2hrs      |    1.5hrs     |   1.5hrs    |
+| Header and Fotter Componennts |    H     |      2hrs      |      1hr      |     1hr     |
+| Home Component                |    H     |      2hrs      |      1hr      |     1hr     |
+| Recipes Component             |    H     |      2hrs      |      1hr      |     1hr     |
+| Recipe Component              |    H     |      2hrs      |      1hr      |     1hr     |
+| Form Component                |    H     |      3hrs      |    2.5hrs     |   2.5hrs    |
+| Flex and Grid                 |    H     |      4hrs      |     8hrs      |    8hrs     |
+| General Styling               |    M     |      4hrs      |     12hrs     |    12hrs    |
+| Media Queries                 |    H     |      4hrs      |     4hrs      |    4hrs     |
+| Post-MVP Componenet Additions |    L     |      3hrs      |     3hrs      |    3hrs     |
+| Post-MVP Styling              |    L     |      3hrs      |     2hrs      |    2hrs     |
+| Total                         |    H     |     37hrs      |    41.5hrs    |   41.5hrs   |
 
 ## SWOT Analysis
 
@@ -112,3 +113,8 @@ I think I have the chance to make a really functional app that also allows me to
 ### Threats:
 
 My biggest threat is time management. Sometimes I get wrapped up in small details that aren't that important and waste too much time on them.
+
+## Change Log:
+
+- I changed my component layout just slightly (mostly for post MVP work)
+- I decided just rendering one recipe on homepage as the recipe of the day would look best.
