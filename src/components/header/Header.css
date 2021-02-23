@@ -1,7 +1,6 @@
 .nav {
   height: 80px;
   width: 96vw;
-  /* background-color: rgb(237, 199, 109); */
   border-bottom: 5px solid rgb(237, 199, 109);
 }
 .link {
@@ -20,11 +19,7 @@
   align-items: center;
 }
 #title {
-  /* flex-grow: 3; */
-  /* align-self: flex-start; */
-  /* float: left; */
   font-size: 33px;
-  /* margin-left: 20px; */
   color: rgb(54, 70, 82);
   text-decoration: none;
   font-family: "Monoton", cursive;

@@ -1,4 +1,7 @@
+//I ran out of time to implement this post-mvp component. Leaving here to work on later
+
 import "./Search.css";
+
 function Search(props) {
   return (
     <div className="search-box">

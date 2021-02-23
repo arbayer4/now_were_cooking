@@ -16,11 +16,6 @@ function Form(props) {
   const [stepCount, setStepCount] = useState(1);
   const [photoURL, setPhotoURL] = useState("");
   const [originalSource, setOriginalSource] = useState("");
-  // const [dinner, setDinner] = useState("");
-  // const [breakfast, setBreakfast] = useState("");
-  // const [lunch, setLunch] = useState("");
-  // const [dessert, setDessert] = useState("");
-  // const [snack, setSnack] = useState("");
   const [types, setTypes] = useState([]);
   const history = useHistory();
 

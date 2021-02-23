@@ -1,11 +1,81 @@
 .list-recipes-container {
+  width: 100vw;
+  box-sizing: border-box;
+  margin: 20px;
   display: flex;
   flex-flow: row nowrap;
+  justify-content: space-around;
 }
+
 .filters-container {
   display: flex;
+  box-sizing: border-box;
+  width: 20vw;
+  min-height: 100vh;
+  padding: 20px;
+  margin-bottom: 65px;
   flex-flow: column nowrap;
   box-sizing: border-box;
-
+  align-items: center;
+  justify-content: flex-start;
   border-right: 1px solid black;
+}
+.filters {
+  width: 100%;
+}
+.meal-types {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 5px;
+}
+.dietary-restrictions {
+  padding: 10px;
+  border-top: 1px solid black;
+}
+.recipes-container {
+  box-sizing: border-box;
+  width: 80vw;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 105px;
+  align-self: center;
+}
+
+@media (max-width: 768px) {
+  .list-recipes-container {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  .filters-container {
+    display: flex;
+    flex-flow: row nowrap;
+    border-right: none;
+    margin: 10px;
+    padding: 10px;
+    width: 100vw;
+    min-height: unset;
+  }
+  .filters {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    border-bottom: 1px solid black;
+  }
+  .meal-types {
+    display: flex;
+    flex-flow: row-wrap;
+    max-width: 50%;
+    border-top: none;
+    border-bottom: none;
+  }
+  .dietary-restrictions {
+    padding: 10px;
+    border-top: none;
+  }
+  .recipes-container {
+    width: 100vw;
+  }
 }

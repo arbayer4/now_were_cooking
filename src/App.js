@@ -4,7 +4,6 @@ import { Route } from "react-router-dom";
 import { baseURL, config } from "./services";
 import Header from "./components/header/Header";
 import Home from "./components/Home";
-// import Recipes from "./components/Recipes";
 import AddRecipe from "./components/AddRecipe";
 import Recipe from "./components/Recipe";
 import Footer from "./components/Footer";
@@ -23,23 +22,6 @@ function App() {
     getRecipes();
   }, [toggleFetch]);
 
-  async function deleteRecipes() {
-    const remove = async (id) => {
-      const recipeURl = `${baseURL}/${id}`;
-
-      await axios.delete(recipeURl, config);
-    };
-    for (let i = 0; i < recipes.length; i++) {
-      if (!recipes[i].fields.title) {
-        remove(recipes[i].id);
-      } else {
-        console.log(recipes[i].fields.title);
-      }
-    }
-    // setToggleFetch(!toggleFetch);
-  }
-  deleteRecipes();
-  console.log(recipes);
   return (
     <div className="App">
       <Header />

@@ -1,5 +1,4 @@
 .home-container {
-  /* height: vh; */
   margin-bottom: 105px;
   display: flex;
   flex-flow: column nowrap;
@@ -16,25 +15,13 @@
   max-height: 500px;
   background-size: cover;
   background-position: center;
-  /* border-radius: 50px; */
   text-decoration: none;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
-  /* display: grid; */
-  /* background-color: rgb(96, 170, 167); */
-  /* box-sizing: border-box;
-  grid-template-columns: 25vw; */
-  /* min-height: 100vh; */
 }
-/* #featured-recipes-container img {
-  width: 50vw;
-  height: auto;
-  margin-bottom: 60px;
-} */
+
 #featured-recipes-container h1 {
-  /* position: relative;
-  top: 60px; */
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   width: 100%;

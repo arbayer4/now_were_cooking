@@ -24,69 +24,86 @@ function ListRecipes(props) {
     return (
       <div className="list-recipes-container">
         <div className="filters-container">
-          <h4>Filters:</h4>
           <div className="filters">
-            <input
-              type="checkbox"
-              id="filter-is-veggie"
-              value={vegetarian}
-              onChange={(e) => setVegetarian(e.target.checked)}
-            />
-            <label htmlFor="filter-is-veggie">Vegetarian</label>
+            <h4>Filters:</h4>
+            <div className="dietary-restrictions">
+              <input
+                type="checkbox"
+                id="filter-is-veggie"
+                value={vegetarian}
+                onChange={(e) => setVegetarian(e.target.checked)}
+              />
+              <label htmlFor="filter-is-veggie">Vegetarian</label>
+            </div>
             <div className="meal-types">
-              <input
-                type="radio"
-                name="type"
-                id="radio-breakfast"
-                checked={type === "Breakfast"}
-                value="Breakfast"
-                onChange={() => setType("Breakfast")}
-              />
-              <label htmlFor="radio-breakfast">Breakfast</label>
-              <input
-                type="radio"
-                name="type"
-                id="radio-lunch"
-                checked={type === "Lunch"}
-                value="Lunch"
-                onChange={() => setType("Lunch")}
-              />
-              <label htmlFor="radio-breakfast">Lunch</label>
-              <input
-                type="radio"
-                name="type"
-                id="radio-dinner"
-                checked={type === "Dinner"}
-                value="Dinner"
-                onChange={() => setType("Dinner")}
-              />
-              <label htmlFor="radio-dinner">Dinner</label>
-              <input
-                type="radio"
-                name="type"
-                id="radio-dessert"
-                checked={type === "Dessert"}
-                value="Dessert"
-                onChange={() => setType("Dessert")}
-              />
-              <label htmlFor="radio-dessert">Dessert</label>
-              <input
-                type="radio"
-                name="type"
-                id="radio-snack"
-                checked={type === "Snack"}
-                value="Snack"
-                onChange={() => setType("Snack")}
-              />
-              <label htmlFor="radio-snack">Snack</label>
+              <p>Meal Types:</p>
+              <div>
+                <input
+                  type="radio"
+                  name="type"
+                  id="radio-breakfast"
+                  checked={type === "Breakfast"}
+                  value="Breakfast"
+                  onChange={() => setType("Breakfast")}
+                />
+                <label htmlFor="radio-breakfast">Breakfast</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="type"
+                  id="radio-lunch"
+                  checked={type === "Lunch"}
+                  value="Lunch"
+                  onChange={() => setType("Lunch")}
+                />
+                <label htmlFor="radio-breakfast">Lunch</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="type"
+                  id="radio-dinner"
+                  checked={type === "Dinner"}
+                  value="Dinner"
+                  onChange={() => setType("Dinner")}
+                />
+                <label htmlFor="radio-dinner">Dinner</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="type"
+                  id="radio-dessert"
+                  checked={type === "Dessert"}
+                  value="Dessert"
+                  onChange={() => setType("Dessert")}
+                />
+                <label htmlFor="radio-dessert">Dessert</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="type"
+                  id="radio-snack"
+                  checked={type === "Snack"}
+                  value="Snack"
+                  onChange={() => setType("Snack")}
+                />
+                <label htmlFor="radio-snack">Snack</label>
+              </div>
             </div>
           </div>
         </div>
 
         <div className="recipes-container">
-          {filteredRecipes.map((recipe) => (
-            <Recipes key={recipe.id} recipe={recipe} />
-          ))}
+          {filteredRecipes.length ? (
+            filteredRecipes.map((recipe) => (
+              <Recipes key={recipe.id} recipe={recipe} />
+            ))
+          ) : (
+            <h2>No {type}s found</h2>
+          )}
         </div>
       </div>
     );

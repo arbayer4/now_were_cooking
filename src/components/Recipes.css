@@ -5,8 +5,6 @@
   border-radius: 20px;
   width: 60vw;
   height: 30vw;
-  /* height: 350px; */
-
   color: rgb(252, 246, 235);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -34,8 +32,6 @@
 }
 .recipe-card-description {
   grid-area: C;
-  /* max-width: 200px; */
-  /* max-height: 30%; */
   font-size: 18px;
   justify-self: center;
   overflow: hidden;
@@ -47,6 +43,10 @@
 }
 
 @media (max-width: 768px) {
+  .recipe-list-item {
+    width: 90vw;
+    height: 45vw;
+  }
   .recipe-card-title {
     font-size: 18px;
   }

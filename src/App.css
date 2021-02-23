@@ -3,10 +3,7 @@
   text-align: center;
   display: flex;
   flex-flow: column nowrap;
-  /* justify-content: center; */
   align-items: center;
-  /* background: url(https://i.imgur.com/UtdKpCF.jpg) no-repeat center center fixed;
-  background-size: cover; */
   background-color: rgb(252, 246, 235);
   min-height: 100vh;
   font-family: "Roboto", sans-serif;
@@ -18,14 +15,4 @@ h4,
 h5,
 h6 {
   font-family: "Sigmar One", serif;
-  /* color: rgb(54, 70, 82); */
-}
-
-.recipes-container {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-around;
-  align-items: center;
-  /* width: 100vw; */
-  margin-bottom: 105px;
 }

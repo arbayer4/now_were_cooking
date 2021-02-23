@@ -5,7 +5,6 @@ import Burger from "./Burger";
 import "./Header.css";
 
 function Header(props) {
-  // const = bigg
   return (
     <header>
       <nav className="nav">
