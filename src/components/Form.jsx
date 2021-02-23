@@ -43,6 +43,9 @@ function Form(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!types.length) {
+      setTypes([...types, "none"]);
+    }
 
     const fields = {
       title,
