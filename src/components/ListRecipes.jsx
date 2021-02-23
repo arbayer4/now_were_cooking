@@ -20,7 +20,7 @@ function ListRecipes(props) {
       return true;
     });
 
-  if (props.recipes) {
+  if (props.recipes.length) {
     return (
       <div className="list-recipes-container">
         <div className="filters-container">

@@ -37,6 +37,9 @@
   grid-area: I;
   background-color: rgb(237, 199, 109);
   border-radius: 15px;
+  margin: 15px;
+}
+.form-ingredients-list p {
   margin: 5px;
 }
 .form-steps-list {
