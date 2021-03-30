@@ -24,7 +24,7 @@ function Home(props) {
       </div>
     );
   } else {
-    return <h3>Recipe Data Unavailable</h3>;
+    return <h3></h3>;
   }
 }
 

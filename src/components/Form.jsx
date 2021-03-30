@@ -43,7 +43,7 @@ function Form(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!types.length) {
+    if (types.length === 0) {
       setTypes([...types, "none"]);
     }
 
